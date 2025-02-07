@@ -2,6 +2,8 @@ require("dotenv").config();
 
 const express = require("express");
 const expressLayout = require("express-ejs-layouts");
+const cookieParser = require("cookie-parser")
+const MongoStore = require('connect-mongo')
 
 const connectDB = require("./server/config/db");
 
@@ -14,7 +16,21 @@ connectDB();
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
-  
+app.use(cookieParser())  
+
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  store: MongoStore.create({
+    mongoUrl: process.env.MONGODB_URI,
+    // session expires after 30 minutes
+    // cookie: { maxAge: 30 * 60 * 1000 }
+  })
+}))
+
+
 app.use(express.static("public"));
 
 //Templating engine
