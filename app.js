@@ -4,6 +4,8 @@ const express = require("express");
 const expressLayout = require("express-ejs-layouts");
 const cookieParser = require("cookie-parser")
 const MongoStore = require('connect-mongo')
+const session = require('express-session');
+
 
 const connectDB = require("./server/config/db");
 
