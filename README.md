@@ -5,10 +5,7 @@ This project is a simple blog application built using Node.js, Express, MongoDB,
 
 ## 📸 Screenshots 📸
 
-![node.gif](https://github.com/Fiartaks/64-Node.Js-MongoDB--Blog-App/blob/main/public/img/node.gif)
-
-
-
+![panel.png](https://github.com/Fiartaks/64-Node.Js-MongoDB--Blog-App/blob/main/public/img/panel.png)
 
 ![node.gif](https://github.com/Fiartaks/64-Node.Js-MongoDB--Blog-App/blob/main/public/img/node.gif)
 -
